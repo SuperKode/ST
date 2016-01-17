@@ -1,0 +1,27 @@
+Concurrency er muligheten for å utføre flere oppgaver samtidig, selv om prosessoren ikke nødvendigvis kan håndtere flere parallelle oppgaver.
+Parallellisme er muligheten til å utføre flere oppgaver i parallell i flere prosessorkjerner.
+Concurrency deler opp oppgavene og utfører delene litt etter litt.
+
+Datamaskiner har tatt i bruk flere kjerner av følgende grunner:
+- Bedre ytelse av å øke antall kjerner fremfor å øke klokkefrekvens
+- Økende energiforbruk ved økt klokkefrekvens
+- Økende diskrepans mellom prosessor- og minnehastighet.
+
+Man kan kjøre flere oppgaver på én prosessorkjerne. 
+
+Begge, kommer helt an på.
+
+Definisjoner:
+-Process: Styres av operativsystemet og har eget minneområde. Kan kjøres i parallell med andre prosesser på andre prosessorer.
+-Thread: Kan være en del av en prosess. Kan kjøres i parallell med andre tråder på andre prosessorer.
+-"Green Thread": Ikke styrt av OS.
+-Coroutines: Ikke styrt av OS.
+
+GIL gjør at tråder ikke kan få tilgang til interpreter internals samtidig. Dette gjør at flerkjernede prosessorer ikke kan utnytte det at de har flere kjerner.
+
+Funksjoner:
+-pthread_create():
+-threading.Thread():
+-go:
+-GIL-workaround:
+-func GOMAXPROCS(n int) int: Antall OS tråder som får kjøre koden samtidig.
