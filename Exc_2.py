@@ -1,5 +1,5 @@
 # TTK4145
-# Exc_1
+# Exc_2
 
 from threading import Thread, Lock
 
